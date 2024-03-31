@@ -29,17 +29,37 @@ const headerTopLogo = document.createElement('div');
 headerTopLogo.classList.add('header-top__logo');
 headerTopRow.appendChild(headerTopLogo);
 
-// Создание header-top__nav внутри header-top__row
-const headerTopNav = document.createElement('div');
-headerTopNav.classList.add('header-top__nav');
-headerTopRow.appendChild(headerTopNav);
-
 // 3. Вставить в <header> картинку
 
 // Создание логотипа внутри header-top__logo
 const img = document.createElement('img');
 img.src = './img/vector.png';
 headerTopLogo.appendChild(img);
+
+// 4. Создать nav
+
+// Создание header-top__nav внутри header-top__row
+const headerTopNav = document.createElement('div');
+headerTopNav.classList.add('header-top__nav');
+headerTopRow.appendChild(headerTopNav);
+
+// 5. Вставить в nav список
+
+// Создание списка
+const ul = `
+    <ul>
+        <li>Guides</li>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Support</li>
+        <li>Changelog</li>
+        <li>Sign in</li>
+        <li>Sign up</li>
+    </ul> 
+`;
+
+// Перемещение списка в header-top__nav
+headerTopNav.innerHTML = ul;
 
 
 
