@@ -22,15 +22,22 @@ headerTop.classList.add('header-top');
 // Добавление элемента div внутрь элемента body
 header.appendChild(headerTop);
 
-// Создание container внутри header-top
-const container = document.createElement('div');
-container.classList.add('container');
-headerTop.appendChild(container);
+// Создание containerTop внутри header-top
+const containerTop = document.createElement('div');
+containerTop.classList.add('container');
+headerTop.appendChild(containerTop);
+
+// css свойства container
+containerTop.style.width = '1425px';
+containerTop.style.marginLeft = 'auto';
+containerTop.style.marginRight = 'auto';
+containerTop.style.paddingLeft = '48px';
+containerTop.style.paddingRight = '48px';
 
 // Создание header-top__row внутри container 
 const headerTopRow = document.createElement('div');
 headerTopRow.classList.add('header-top__row');
-container.appendChild(headerTopRow);
+containerTop.appendChild(headerTopRow);
 
 // Создание header-top__logo внутри header-top__row
 const headerTopLogo = document.createElement('div');
@@ -50,27 +57,11 @@ headerTopNav.classList.add('header-top__nav');
 headerTopRow.appendChild(headerTopNav);
 
 // Вставить в nav список; Вставить в список элементы с текстом
-
 // Создание списка
-const ul = `
-    <ul>
-        <li>Guides</li>
-        <li>Features</li>
-        <li>Pricing</li>
-        <li>Support</li>
-        <li>Changelog</li>
-        <li>Sign in</li>
-        <li>Sign up</li>
-    </ul> 
-`;
-
-// Перемещение списка в header-top__nav
-headerTopNav.innerHTML = ul;
 
 const ul1 = document.createElement('ul');
 ul1.classList.add('list');
 headerTopRow.appendChild(ul1);
-// ul1.style.display = 'flex';
 
 const li1 = document.createElement('li');
 li1.classList.add('list-item');
@@ -111,16 +102,27 @@ li7.textContent = 'Sign up';
 headerTopRow.style.display = 'flex';
 headerTopRow.style.justifyContent = 'space-between';
 
-
 // Создание header-title
 const headerTitle = document.createElement('div');
 headerTitle.classList.add('header-title');
 header.appendChild(headerTitle);
 
+// containerTitle внутри header-title
+const containerTitle = document.createElement('div');
+containerTitle.classList.add('container');
+headerTitle.appendChild(containerTitle);
+
+// css свойства containerTitle
+containerTitle.style.width = '1425px';
+containerTitle.style.marginLeft = 'auto';
+containerTitle.style.marginRight = 'auto';
+containerTitle.style.paddingLeft = '48px';
+containerTitle.style.paddingRight = '48px';
+
 // Создание header-title__name
 const headerTitleName = document.createElement('div');
 headerTitleName.classList.add('header-title__name');
-headerTitle.appendChild(headerTitleName);
+containerTitle.appendChild(headerTitleName);
 
 const h1 = document.createElement('h1');
 headerTitleName.appendChild(h1);
@@ -129,7 +131,7 @@ h1.textContent = 'Finally, all your team’s work in one place';
 // Создание header-title__text
 const headerTitleText = document.createElement('div');
 headerTitleText.classList.add('header-title__text');
-headerTitle.appendChild(headerTitleText);
+containerTitle.appendChild(headerTitleText);
 
 const p = document.createElement('p');
 headerTitleText.appendChild(p);
@@ -138,7 +140,7 @@ p.textContent = 'Increase your team’s speed,collaboration, and alignment by gi
 // Создание header-title__buttons
 const headerTitleButtons = document.createElement('div');
 headerTitleButtons.classList.add('header-title__buttons');
-headerTitle.appendChild(headerTitleButtons);
+containerTitle.appendChild(headerTitleButtons);
 
 // button-left
 const buttonLeft = document.createElement('a');
