@@ -8,8 +8,10 @@ header.classList.add('header');
 body.appendChild(header);
 
 // header-background
+header.style.position = 'relative';
+header.style.width = 'auto';
+header.style.paddingTop = '16px';
 header.style.backgroundColor = '#E5FF76E5';
-header.style.height = '900px';
 
 // 3. header-top
 // Создание элемента div
@@ -27,7 +29,7 @@ const containerTop = document.createElement('div');
 containerTop.classList.add('container');
 headerTop.appendChild(containerTop);
 
-// css свойства container
+// css свойства containerTop
 containerTop.style.width = '1425px';
 containerTop.style.marginLeft = 'auto';
 containerTop.style.marginRight = 'auto';
@@ -61,7 +63,7 @@ headerTopRow.appendChild(headerTopNav);
 
 const ul1 = document.createElement('ul');
 ul1.classList.add('list');
-headerTopRow.appendChild(ul1);
+headerTopNav.appendChild(ul1);
 
 const li1 = document.createElement('li');
 li1.classList.add('list-item');
@@ -107,6 +109,9 @@ const headerTitle = document.createElement('div');
 headerTitle.classList.add('header-title');
 header.appendChild(headerTitle);
 
+// css свойства header-title
+header.style.textAlign = 'center';
+
 // containerTitle внутри header-title
 const containerTitle = document.createElement('div');
 containerTitle.classList.add('container');
@@ -143,13 +148,13 @@ headerTitleButtons.classList.add('header-title__buttons');
 containerTitle.appendChild(headerTitleButtons);
 
 // button-left
-const buttonLeft = document.createElement('a');
+const buttonLeft = document.createElement('button');
 buttonLeft.classList.add('button');
 headerTitleButtons.appendChild(buttonLeft);
 buttonLeft.textContent = 'Get started for free';
 
 // button-right
-const buttonRight = document.createElement('a');
+const buttonRight = document.createElement('button');
 buttonRight.classList.add('button');
 headerTitleButtons.appendChild(buttonRight);
 buttonRight.textContent = 'Watch video';
@@ -163,16 +168,56 @@ const headerBanner = document.createElement('div');
 headerBanner.classList.add('header-banner');
 header.appendChild(headerBanner);
 
+// Создание containerBanner внутри header-banner
+const containerBanner = document.createElement('div');
+containerBanner.classList.add('container');
+headerBanner.appendChild(containerBanner);
+
+// css свойства containerBanner
+containerBanner.style.width = '1425px';
+containerBanner.style.marginLeft = 'auto';
+containerBanner.style.marginRight = 'auto';
+containerBanner.style.paddingLeft = '48px';
+containerBanner.style.paddingRight = '48px';
+
+// background-image
 const backImg = document.createElement('img');
 backImg.src = './img/background-image.png';
-headerBanner.appendChild(backImg);
-backImg.style.width = '420px';
-
+containerBanner.appendChild(backImg);
+backImg.style.width = 'auto';
+backImg.style.height = '740px';
+backImg.style.paddingLeft = '112px';
+backImg.style.paddingRight = '112px';
 
 // Создание header-company
 const headerCompany = document.createElement('div');
 headerCompany.classList.add('header-company');
 header.appendChild(headerCompany);
+
+// Создание containerCompany внутри header-company
+const containerCompany = document.createElement('div');
+containerCompany.classList.add('container');
+headerCompany.appendChild(containerCompany);
+
+// css свойства containerCompany
+containerCompany.style.width = '1425px';
+containerCompany.style.marginLeft = 'auto';
+containerCompany.style.marginRight = 'auto';
+containerCompany.style.paddingLeft = '48px';
+containerCompany.style.paddingRight = '48px';
+
+// Создание header-company__name
+const headerCompanyName = document.createElement('div');
+headerCompanyName.classList.add('header-company__name');
+containerCompany.appendChild(headerCompanyName);
+
+const h2 = document.createElement('h2');
+headerCompanyName.appendChild(h2);
+h2.textContent = 'YOU’RE IN GOOD COMPANY';
+
+// Создание header-company__logo
+
+
 
 // Создание main
 const main = document.createElement('main');
