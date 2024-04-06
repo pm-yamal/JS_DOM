@@ -1,6 +1,5 @@
 // 1. Найти элемент <body>
 const body = document.body;
-console.log(body);
 
 // 2. Создать элемент <header>
 const header = document.createElement('header');
@@ -16,7 +15,6 @@ header.style.backgroundColor = '#E5FF76E5';
 // 3. header-top
 // Создание элемента div
 const headerTop = document.createElement('div');
-console.log(headerTop);
 
 // Добавление к элементу div класса header-top
 headerTop.classList.add('header-top');
@@ -61,44 +59,51 @@ headerTopRow.appendChild(headerTopNav);
 // Вставить в nav список; Вставить в список элементы с текстом
 // Создание списка
 
-const ul1 = document.createElement('ul');
-ul1.classList.add('list');
-headerTopNav.appendChild(ul1);
+const ul = document.createElement('ul');
+ul.classList.add('nav-list');
+headerTopNav.appendChild(ul);
+
+// css свойства ul
+ul.style.display = 'flex';
+ul.style.columnGap = '40px';
+ul.style.listStyle = 'none';
+ul.style.fontSize = '17px';
 
 const li1 = document.createElement('li');
-li1.classList.add('list-item');
-ul1.appendChild(li1);
+li1.classList.add('nav-list__item');
+ul.appendChild(li1);
 li1.textContent = 'Guides';
 
 const li2 = document.createElement('li');
-li2.classList.add('list-item');
-ul1.appendChild(li2);
+li2.classList.add('nav-list__item');
+ul.appendChild(li2);
 li2.textContent = 'Features';
 
 const li3 = document.createElement('li');
-li3.classList.add('list-item');
-ul1.appendChild(li3);
+li3.classList.add('nav-list__item');
+ul.appendChild(li3);
 li3.textContent = 'Pricing';
 
 const li4 = document.createElement('li');
-li4.classList.add('list-item');
-ul1.appendChild(li4);
+li4.classList.add('nav-list__item');
+ul.appendChild(li4);
 li4.textContent = 'Support';
 
 const li5 = document.createElement('li');
-li5.classList.add('list-item');
-ul1.appendChild(li5);
+li5.classList.add('nav-list__item');
+ul.appendChild(li5);
 li5.textContent = 'Changelog';
 
 const li6 = document.createElement('li');
-li6.classList.add('list-item');
-ul1.appendChild(li6);
+li6.classList.add('nav-list__item');
+ul.appendChild(li6);
 li6.textContent = 'Sign in';
 
-const li7 = document.createElement('li');
-li7.classList.add('list-item');
-ul1.appendChild(li7);
+const li7 = document.createElement('button');
+li7.classList.add('nav-list__item');
+ul.appendChild(li7);
 li7.textContent = 'Sign up';
+
 
 // Flex header-top__row
 headerTopRow.style.display = 'flex';
